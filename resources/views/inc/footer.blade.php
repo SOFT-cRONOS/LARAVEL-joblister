@@ -63,25 +63,25 @@
 @push('css')
 <style>
   .footer-main{
-    background-color:#272727;
-    color:#ddd;
+    background-color:var(--primary);
+    color:var(white);
   }
   .footer-links{
     padding-top:2rem;
     padding-bottom: 2rem;
   }
   .footer-links .footer-hdr{
-    color:#ddd;
+    color:white;
   }
   .footer-links .footer-link-list .footer-links{
     display:block;
-    color:#ccc;
+    color:white;
     padding:3px 0; 
     margin:0;
     font-size:.9rem;
   }
   .footer-links .footer-link-list .footer-links:hover{
-    color:white;
+    color:var(--link-hover)
   }
   .footer-main .social-links {
     margin:20px 0;
@@ -95,7 +95,7 @@
   }
   .footer-main .social-links .social-link:hover{
     color:white;
-    background-color:#0261A6;
+    background-color:var(--secondary);
   }
 </style>
 @endpush

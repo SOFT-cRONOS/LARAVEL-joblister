@@ -39960,7 +39960,7 @@ var render = function() {
                                 {
                                   attrs: {
                                     href:
-                                      "/job/" + post.id + "-" + post.job_title,
+                                      "/job/" + post.id,
                                     target: "_blank"
                                   }
                                 },

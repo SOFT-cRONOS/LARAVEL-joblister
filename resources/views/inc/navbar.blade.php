@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-white bg-white border-bottom sticky-top" id="navbar">
+<nav class="navbar navbar-expand-md navbar-white bg-white sticky-top" id="navbar">
   <div class="container">
   <a href="{{URL('/')}}" class="navbar-brand">
       JobLister

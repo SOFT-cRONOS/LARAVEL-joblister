@@ -33,7 +33,7 @@
   
   {{-- jobs list --}}
   <section class="jobs-section py-5">
-    <div class="container-fluid px-0">
+    <div class="container-fluid container-7">
       <div class="row ">
         <div class="col-sm-12 col-md-7 ml-auto">
           <div class="card">
@@ -42,22 +42,38 @@
             </div>
             <div class="card-body">
               <div class="top-jobs" >
-                <div class="row">
+                <div class="">
 
                   @foreach ($posts as $post)
                     @if ($post->company)
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-sm-6 mb-sm-3">
+                    <div class="col rounded border-bottom border-grey hover">
                       <a href="{{route('post.show',['job'=>$post->id])}}">
-                      <div class="job-item border row h-100">
-                        <div class="col-xs-3 col-sm-4 col-md-5">
-                          <img src="{{asset($post->company->logo)}}" alt="job listings" class="img-fluid p-2">
+                      <div class="card rounded-0 bg-transparent flex-md-row mb-3 mt-0 pt-3 box-shadow h-md-250 px-2 border-b">
+                        
+                        <div class="row g-0">
+                          <div class="col-md-4 d-flex justify-content-center">
+
+                            <img src="{{asset($post->company->logo)}}" alt="job listings" class="img-fluid p-2">
+
+                          </div>
+
+                          <div class="job-description col align-content-center text-center-movile">
+
+                              <p class="company-name small" title="{{$post->company->title}}">{{$post->company->title}}</p>
+                                <ul class="company-listings ul-plane">
+                                  <li class=""><strong>{{substr($post->job_title, 0, 27)}}</strong></li>
+                              </ul>
+
+                          </div>
+
+                          <div class="col-md-2 d-flex justify-content-center align-items-center">
+
+                            <div class="small"><span class="text-info">{{$post->employment_type}}</span></div>
+
+                          </div>
+
                         </div>
-                        <div class="job-description col-xs-9 col-sm-8 col-md-7">
-                        <p class="company-name" title="{{$post->company->title}}">{{$post->company->title}}</p>
-                          <ul class="company-listings">
-                            <li>•{{substr($post->job_title, 0, 27)}}</li>
-                        </ul>
-                        </div>
+
                       </div>
                       </a>
                     </div>
