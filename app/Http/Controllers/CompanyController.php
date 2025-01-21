@@ -87,7 +87,7 @@ class CompanyController extends Controller
         return $request->validate([
             'title' => 'required|min:5',
             'description' => 'required|min:5',
-            'logo' => 'someiimes|image|max:2999',
+            'logo' => 'sometimes|image|max:2999',
             'category' => 'required',
             'website' => 'required|string',
             'cover_img' => 'sometimes|image|max:3999'

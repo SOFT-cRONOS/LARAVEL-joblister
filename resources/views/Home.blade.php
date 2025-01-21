@@ -113,7 +113,7 @@
               <div class="card-body">
                 <div class="jobs-category mb-3 mt-0">
                   @foreach ($categories as $category)
-                  <div class="hover-shadow p-1"><a href="{{URL::to('search?category_id='.$category->id)}}" class="text-muted">{{$category->category_name}}</a> </div>
+                  <div class="p-1"><a href="{{URL::to('search?category_id='.$category->id)}}" class="text-muted hover-light">{{$category->category_name}}</a> </div>
                   @endforeach
                   <a class="p-1 text-info" href="{{route('job.index')}}">More..</a>
                 </div>
