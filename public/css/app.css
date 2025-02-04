@@ -509,7 +509,7 @@ mark,
 }
 
 .img-fluid {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -12202,7 +12202,7 @@ button {
       }
 
     .img-fluid {
-      max-height: 100%;
+      max-height: 60px;
     }
 
     .text-center-movile {

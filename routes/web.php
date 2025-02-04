@@ -12,8 +12,10 @@ use App\Http\Controllers\savedJobController;
 use Illuminate\Support\Facades\Route;
 
 //public routes
-Route::get('/', [PostController::class, 'index'])->name('post.index');
+Route::get('/', [PostController::class, 'index'])->name('post.index'); //home para seleccionar buscar empresa o empleo
+Route::get('/jobs', [PostController::class, 'index'])->name('post.index'); //listar los trabajos disponibles
 Route::get('/job/{job}', [PostController::class, 'show'])->name('post.show');
+Route::get('company', [AuthorController::class, 'employer'])->name('account.employer'); //listar los emprendimientos
 Route::get('employer/{employer}', [AuthorController::class, 'employer'])->name('account.employer');
 
 //return vue page
